@@ -10,14 +10,14 @@ const App = () => {
 
   // Função para carregar clientes do backend
   const carregarClientes = async () => {
-    const response = await axios.get('http://localhost:3001/clientes'); // Ajuste para sua porta de backend
+    const response = await axios.get('https://backendseumei.onrender.com/clientes'); // Ajuste para sua porta de backend
     setClientes(response.data);
   };
 
   // Função para adicionar um novo cliente
   const adicionarCliente = async () => {
     const novoCliente = { nome, email, endereco };
-    await axios.post('http://localhost:3001/clientes', novoCliente);
+    await axios.post('https://backendseumei.onrender.com/clientes', novoCliente);
     setNome('');
     setEmail('');
     setEndereco('');
